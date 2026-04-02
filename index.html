@@ -598,6 +598,20 @@
     }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
+    /* ─── BLOG CARDS ─── */
+    .blog-card { flex-direction: column; align-items: flex-start; cursor: default; }
+    .blog-read-link {
+      font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.08em;
+      color: var(--cyan); text-decoration: none; text-transform: uppercase;
+      border: 1px solid rgba(0,212,255,0.35); border-radius: 4px;
+      padding: 0.3rem 0.7rem; transition: all 0.2s; display: inline-block;
+    }
+    .blog-read-link:hover { background: rgba(0,212,255,0.1); transform: translateY(-1px); }
+    .blog-coming {
+      font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.1em;
+      color: var(--muted); text-transform: uppercase;
+    }
+
     /* ─── RESPONSIVE ─── */
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; padding-top: 6rem; }
@@ -676,6 +690,7 @@
       <a class="nav-logo" href="#">PKM</a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#blog">Blog</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#specializations">Specializations</a></li>
@@ -724,7 +739,7 @@
         </div>
         <div class="hero-meta-item">
           <div class="lbl">Email</div>
-          <div class="val"><a href="mailto:pravin1350.mishra@outlook.com">pravin1350.mishra@outlook.com</a></div>
+          <div class="val"><a href="/cdn-cgi/l/email-protection#c0b0b2a1b6a9aef1f3f5f0eeada9b3a8b2a180afb5b4acafafabeea3afad"><span class="__cf_email__" data-cfemail="4a3a382b3c23247b797f7a6427233922382b0a253f3e2625252164292527">[email&#160;protected]</span></a></div>
         </div>
         <div class="hero-meta-item">
           <div class="lbl">LinkedIn</div>
@@ -732,7 +747,7 @@
         </div>
       </div>
       <div class="hero-cta">
-        <a href="mailto:pravin1350.mishra@outlook.com" class="btn-primary">Get In Touch</a>
+        <a href="/cdn-cgi/l/email-protection#62121003140b0c535157524c0f0b110a1003220d17160e0d0d094c010d0f" class="btn-primary">Get In Touch</a>
         <a href="https://www.credly.com/users/pravin-mishra" target="_blank" class="btn-secondary">View Credentials ↗</a>
       </div>
     </div>
@@ -747,11 +762,11 @@
           <div class="profile-card-role">Network Security &amp; Automation Architect</div>
           <div class="profile-stats">
             <div class="pstat">
-              <div class="pstat-num" data-target="13">0</div>
+              <div class="pstat-num" data-target="13" data-suffix="+">0</div>
               <div class="pstat-lbl">Years Exp.</div>
             </div>
             <div class="pstat">
-              <div class="pstat-num o" data-target="3">0</div>
+              <div class="pstat-num o" data-target="3" data-suffix="×">0</div>
               <div class="pstat-lbl">CCIE Certs</div>
             </div>
             <div class="pstat">
@@ -767,8 +782,8 @@
             <a href="tel:+14374289095" class="profile-card-link">
               <span class="ico">TEL</span>+1 437 428 9095
             </a>
-            <a href="mailto:pravin1350.mishra@outlook.com" class="profile-card-link">
-              <span class="ico">MAIL</span>pravin1350.mishra@outlook.com
+            <a href="/cdn-cgi/l/email-protection#45353724332c2b747670756b282c362d3724052a3031292a2a2e6b262a28" class="profile-card-link">
+              <span class="ico">MAIL</span><span class="__cf_email__" data-cfemail="dfafadbea9b6b1eeeceaeff1b2b6acb7adbe9fb0aaabb3b0b0b4f1bcb0b2">[email&#160;protected]</span>
             </a>
             <a href="https://www.credly.com/users/pravin-mishra" target="_blank" class="profile-card-link">
               <span class="ico">CRED</span>credly.com/users/pravin-mishra
@@ -803,6 +818,7 @@
           <p>Expert in <strong>Cisco technologies</strong>, BGP routing, SDN (ACI), and cloud networking architectures — Hub-Spoke, VNet peering, and beyond.</p>
           <p>Strong background in <strong>high-severity incident response</strong>, NOC operations, ITIL processes, and network automation via <strong>Python</strong> and <strong>Ansible</strong>. Proven ability to lead complex deployments and optimize performance across on-prem and cloud-integrated environments.</p>
           <p>Specializing in <strong>AI Networking</strong> (RoCEv2, GPU fabric, lossless Ethernet), <strong>AI-Ready Data Center design</strong> (EVPN/VXLAN, NVMe-oF, 400G fabrics), <strong>Splunk capacity planning &amp; deployment</strong>, <strong>Cisco pyATS/Genie</strong> test automation, and <strong>CISO-level security strategy</strong> aligned to NIST and ISO&nbsp;27001.</p>
+          <p>Fluent in <strong>English</strong>. Based in Mississauga, Ontario, Canada.</p>
         </div>
         <div class="about-highlights reveal">
           <div class="highlight-row">
@@ -1086,14 +1102,18 @@
         <button class="skill-tab active" onclick="showSkill('net', this)">Networking</button>
         <button class="skill-tab" onclick="showSkill('cloud', this)">Cloud &amp; IAM</button>
         <button class="skill-tab" onclick="showSkill('sec', this)">Security</button>
+        <button class="skill-tab" onclick="showSkill('secarch', this)">Security Architecture</button>
+        <button class="skill-tab" onclick="showSkill('cyber', this)">Cybersecurity</button>
+        <button class="skill-tab" onclick="showSkill('devsecops', this)">DevSecOps</button>
         <button class="skill-tab" onclick="showSkill('auto', this)">Automation</button>
         <button class="skill-tab" onclick="showSkill('ops', this)">Operations</button>
         <button class="skill-tab" onclick="showSkill('ai', this)">AI Networking</button>
-        <button class="skill-tab" onclick="showSkill('pyats', this)">CISO &amp; pyATS</button>
+        <button class="skill-tab" onclick="showSkill('pyats', this)">Cisco pyATS</button>
         <button class="skill-tab" onclick="showSkill('splunk', this)">Splunk</button>
         <button class="skill-tab" onclick="showSkill('aidc', this)">AI-Ready DC</button>
       </div>
 
+      <!-- Networking -->
       <div class="skill-panel active" id="sk-net">
         <div class="skill-tags-cloud">
           <span class="stag">Cisco ACI</span>
@@ -1101,26 +1121,32 @@
           <span class="stag">Catalyst</span>
           <span class="stag">Wireless Controllers</span>
           <span class="stag">BGP Routing</span>
+          <span class="stag">OSPF</span>
+          <span class="stag">EIGRP</span>
+          <span class="stag">IS-IS</span>
+          <span class="stag">MPLS</span>
           <span class="stag">On-Prem &amp; Cloud Peering</span>
           <span class="stag">Data Center Networks</span>
           <span class="stag">Campus LAN</span>
           <span class="stag">WiFi</span>
           <span class="stag">WAN</span>
+          <span class="stag">SD-WAN</span>
           <span class="stag">Multi-POD IPN ACI</span>
           <span class="stag">802.1X</span>
-          <span class="stag">TACACS</span>
+          <span class="stag">TACACS+</span>
           <span class="stag">Profiling &amp; Posturing</span>
-          <span class="stag">OSPF</span>
-          <span class="stag">EIGRP</span>
+          <span class="stag">QoS Design</span>
         </div>
       </div>
 
+      <!-- Cloud & IAM -->
       <div class="skill-panel" id="sk-cloud">
         <div class="skill-tags-cloud">
           <span class="stag o">Azure Networking</span>
           <span class="stag o">Hub-Spoke Architecture</span>
           <span class="stag o">VNet Peering</span>
-          <span class="stag o">VPC Equivalent</span>
+          <span class="stag o">Azure Virtual WAN</span>
+          <span class="stag o">ExpressRoute</span>
           <span class="stag o">Microsoft Entra ID (Azure AD)</span>
           <span class="stag o">SSO</span>
           <span class="stag o">MFA</span>
@@ -1130,22 +1156,25 @@
           <span class="stag o">IaaS / PaaS / SaaS</span>
           <span class="stag o">SDN</span>
           <span class="stag o">Azure AZ-700</span>
+          <span class="stag o">AWS Networking (VPC, TGW)</span>
+          <span class="stag o">Cloud Security Posture Management</span>
         </div>
       </div>
 
+      <!-- Security (Firewalls & NAC) -->
       <div class="skill-panel" id="sk-sec">
         <div class="skill-tags-cloud">
           <span class="stag p">Zero Trust Architecture</span>
           <span class="stag p">Network Segmentation</span>
           <span class="stag p">Purdue Model (ICS/OT)</span>
-          <span class="stag p">Cisco ISE (NAC)</span>
+          <span class="stag p">Cisco Identity Service Engine (ISE)</span>
           <span class="stag p">802.1X Identity-Based Access</span>
           <span class="stag p">Cisco Firepower (2100/4100/9300)</span>
           <span class="stag p">FMC</span>
           <span class="stag p">Palo Alto NGFW</span>
           <span class="stag p">Panorama</span>
           <span class="stag p">Cloud NGFW</span>
-          <span class="stag p">Checkpoint Firewalls</span>
+          <span class="stag p">Checkpoint Firewalls (CCSA)</span>
           <span class="stag p">Juniper Pulse Secure</span>
           <span class="stag p">Zscaler Proxy</span>
           <span class="stag p">SAML Authentication</span>
@@ -1154,45 +1183,131 @@
           <span class="stag p">Safenet / Gemalto MFA</span>
           <span class="stag p">Malware Detection</span>
           <span class="stag p">IPS/IDS</span>
-          <span class="stag p">XSS / CSRF / SQLi Analysis</span>
           <span class="stag p">DMZ Architecture</span>
+          <span class="stag p">VPN / SSL / IPSec</span>
           <span class="stag p">CISSP</span>
         </div>
       </div>
 
+      <!-- Security Architecture & Frameworks -->
+      <div class="skill-panel" id="sk-secarch">
+        <div class="skill-tags-cloud">
+          <span class="stag p">CISO-Level Security Strategy</span>
+          <span class="stag p">Security Architecture Review</span>
+          <span class="stag p">Enterprise Security Blueprint</span>
+          <span class="stag p">Risk Assessment &amp; Remediation</span>
+          <span class="stag p">Security Policy Development</span>
+          <span class="stag p">Governance, Risk &amp; Compliance (GRC)</span>
+          <span class="stag p">NIST Cybersecurity Framework</span>
+          <span class="stag p">ISO/IEC 27001</span>
+          <span class="stag p">ISO/IEC 27002</span>
+          <span class="stag p">CIS Controls</span>
+          <span class="stag p">SOC 2 Readiness</span>
+          <span class="stag p">Board-Level Security Reporting</span>
+          <span class="stag p">Business Continuity Planning</span>
+          <span class="stag p">Disaster Recovery Design</span>
+          <span class="stag p">Security Maturity Assessments</span>
+          <span class="stag p">Vendor Risk Management</span>
+          <span class="stag p">ITIL v4 Managing Professional</span>
+        </div>
+      </div>
+
+      <!-- Cybersecurity -->
+      <div class="skill-panel" id="sk-cyber">
+        <div class="skill-tags-cloud">
+          <span class="stag p">Threat Modelling (STRIDE / PASTA)</span>
+          <span class="stag p">Attack Surface Analysis</span>
+          <span class="stag p">Vulnerability Management</span>
+          <span class="stag p">CVE / CVSS Scoring</span>
+          <span class="stag p">Penetration Testing Concepts</span>
+          <span class="stag p">Red Team / Blue Team Frameworks</span>
+          <span class="stag p">MITRE ATT&amp;CK Framework</span>
+          <span class="stag p">Cyber Kill Chain</span>
+          <span class="stag p">XSS / CSRF / SQLi Analysis</span>
+          <span class="stag p">Phishing &amp; Social Engineering Awareness</span>
+          <span class="stag p">Incident Response Planning</span>
+          <span class="stag p">Digital Forensics Basics</span>
+          <span class="stag p">Endpoint Detection &amp; Response (EDR)</span>
+          <span class="stag p">SOAR Playbooks</span>
+          <span class="stag p">Threat Intelligence Feeds</span>
+          <span class="stag p">Dark Web Monitoring Concepts</span>
+          <span class="stag p">ICS/OT Cybersecurity</span>
+        </div>
+      </div>
+
+      <!-- DevSecOps -->
+      <div class="skill-panel" id="sk-devsecops">
+        <div class="skill-tags-cloud">
+          <span class="stag g">SAST (Static Application Security Testing)</span>
+          <span class="stag g">DAST (Dynamic Application Security Testing)</span>
+          <span class="stag g">SCA (Software Composition Analysis)</span>
+          <span class="stag g">Container Image Scanning</span>
+          <span class="stag g">Secret Detection in Code</span>
+          <span class="stag g">Shift-Left Security</span>
+          <span class="stag g">Security Gates in CI/CD</span>
+          <span class="stag g">GitOps Security</span>
+          <span class="stag g">Policy as Code (OPA / Rego)</span>
+          <span class="stag g">Infrastructure as Code Security</span>
+          <span class="stag g">Terraform Security Scanning</span>
+          <span class="stag g">Kubernetes Security (RBAC, PSP)</span>
+          <span class="stag g">Supply Chain Security (SBOM)</span>
+          <span class="stag g">Zero Trust CI/CD Pipelines</span>
+          <span class="stag g">Secrets Management (Vault)</span>
+          <span class="stag g">Compliance-as-Code</span>
+          <span class="stag g">DevSecOps Culture &amp; Training</span>
+        </div>
+      </div>
+
+      <!-- Network Automation -->
       <div class="skill-panel" id="sk-auto">
         <div class="skill-tags-cloud">
           <span class="stag g">Python</span>
           <span class="stag g">Ansible</span>
-          <span class="stag g">REST APIs</span>
+          <span class="stag g">Terraform</span>
+          <span class="stag g">YANG</span>
+          <span class="stag g">NETCONF</span>
+          <span class="stag g">RESTCONF</span>
+          <span class="stag g">REST API</span>
           <span class="stag g">CI/CD Pipelines</span>
-          <span class="stag g">Git</span>
+          <span class="stag g">Git / GitHub / GitLab</span>
           <span class="stag g">Jenkins</span>
           <span class="stag g">Docker</span>
+          <span class="stag g">Kubernetes</span>
+          <span class="stag g">Rancher</span>
+          <span class="stag g">Helm Charts</span>
           <span class="stag g">Containerized Network Tools</span>
           <span class="stag g">Infrastructure as Code (IaC)</span>
-          <span class="stag g">Templating</span>
+          <span class="stag g">Jinja2 Templating</span>
           <span class="stag g">Centralized Deployments</span>
           <span class="stag g">Network Automation Scripts</span>
+          <span class="stag g">Agentic AI for Network Automation</span>
+          <span class="stag g">MCP Integration with Claude</span>
+          <span class="stag g">Intent-Based Automation</span>
+          <span class="stag g">Event-Driven Automation</span>
         </div>
       </div>
 
+      <!-- Operations -->
       <div class="skill-panel" id="sk-ops">
         <div class="skill-tags-cloud">
           <span class="stag">High-Severity Incident Management (P1/P2)</span>
           <span class="stag">NOC Integration</span>
           <span class="stag">Splunk Monitoring</span>
           <span class="stag">NetWitness</span>
-          <span class="stag">ITIL</span>
+          <span class="stag">ITIL v4</span>
           <span class="stag">Change Management</span>
           <span class="stag">ServiceNow</span>
           <span class="stag">CAB Meetings</span>
           <span class="stag">HLD / LLD Documentation</span>
           <span class="stag">NIB &amp; AEP Planning</span>
           <span class="stag">L3 Support</span>
+          <span class="stag">SLA Management</span>
+          <span class="stag">Capacity Planning</span>
+          <span class="stag">Network Health Dashboards</span>
         </div>
       </div>
 
+      <!-- AI Networking -->
       <div class="skill-panel" id="sk-ai">
         <div class="skill-tags-cloud">
           <span class="stag c">AI/ML Traffic Engineering</span>
@@ -1213,6 +1328,7 @@
         </div>
       </div>
 
+      <!-- Cisco pyATS -->
       <div class="skill-panel" id="sk-pyats">
         <div class="skill-tags-cloud">
           <span class="stag g">Cisco pyATS / Genie</span>
@@ -1223,17 +1339,14 @@
           <span class="stag g">Pre/Post Change Validation</span>
           <span class="stag g">CI/CD Network Integration</span>
           <span class="stag g">Continuous Compliance Checks</span>
-          <span class="stag g">CISO Framework Alignment</span>
-          <span class="stag g">Security Architecture Review</span>
-          <span class="stag g">Risk Assessment &amp; Remediation</span>
-          <span class="stag g">Security Policy Development</span>
-          <span class="stag g">Threat Modelling</span>
-          <span class="stag g">Governance, Risk &amp; Compliance (GRC)</span>
-          <span class="stag g">NIST / ISO 27001 Alignment</span>
-          <span class="stag g">Board-Level Security Reporting</span>
+          <span class="stag g">Network State Diffing</span>
+          <span class="stag g">Automated Health Checks</span>
+          <span class="stag g">Rollback Automation</span>
+          <span class="stag g">Multi-vendor Test Suites</span>
         </div>
       </div>
 
+      <!-- Splunk -->
       <div class="skill-panel" id="sk-splunk">
         <div class="skill-tags-cloud">
           <span class="stag o">Splunk Enterprise Architecture</span>
@@ -1257,6 +1370,7 @@
         </div>
       </div>
 
+      <!-- AI-Ready DC -->
       <div class="skill-panel" id="sk-aidc">
         <div class="skill-tags-cloud">
           <span class="stag p">AI-Ready DC Architecture</span>
@@ -1279,7 +1393,7 @@
         </div>
       </div>
 
-    </div>
+        </div>
   </section>
 
   <!-- ════ SPECIALIZATIONS ════ -->
@@ -1506,11 +1620,24 @@
     </div>
   </section>
 
+  <!-- ════ BLOG ════ -->
+  <section id="blog">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="sec-num">07</span>
+        <h2 class="sec-title">Blog</h2>
+        <div class="sec-line"></div>
+      </div>
+      <p class="reveal" style="color:var(--muted2);font-size:0.9rem;margin-bottom:2.5rem;max-width:700px;">Insights on network security, automation, AI networking, and the future of enterprise infrastructure.</p>
+      <div id="blog-grid" class="reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1rem;"></div>
+    </div>
+  </section>
+
   <!-- ════ CONTACT ════ -->
   <section id="contact">
     <div class="container">
       <div class="section-header reveal">
-        <span class="sec-num">07</span>
+        <span class="sec-num">08</span>
         <h2 class="sec-title">Contact</h2>
         <div class="sec-line"></div>
       </div>
@@ -1524,12 +1651,12 @@
             <span class="contact-ico">PHONE</span>
             <span class="contact-val">+1 437 428 9095</span>
           </a>
-          <a href="mailto:pravin1350.mishra@outlook.com" class="contact-link">
+          <a href="/cdn-cgi/l/email-protection#3d4d4f5c4b54530c0e080d1350544e554f5c7d52484951525256135e5250" class="contact-link">
             <span class="contact-ico" style="display:flex;align-items:center;gap:4px;">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
               EMAIL
             </span>
-            <span class="contact-val">pravin1350.mishra@outlook.com</span>
+            <span class="contact-val"><span class="__cf_email__" data-cfemail="64141605120d0a555751544a090d170c1605240b1110080b0b0f4a070b09">[email&#160;protected]</span></span>
           </a>
           <a href="https://wa.me/14374289095" target="_blank" class="contact-link" style="border-color:rgba(37,211,102,0.3);">
             <span class="contact-ico" style="color:#25d366;display:flex;align-items:center;gap:4px;">
@@ -1565,7 +1692,7 @@
     <div>© 2025 Pravin Kumar Mishra &nbsp;·&nbsp; Network Security &amp; Automation Architect &nbsp;·&nbsp; 3× CCIE · CISSP · PCNSE · Azure AZ-700</div>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // ─── ANIMATED CANVAS ───
     const canvas = document.getElementById('bgCanvas');
     const ctx = canvas.getContext('2d');
@@ -1730,47 +1857,142 @@
       btn.classList.add('active');
     }
 
+    // ═══════════════════════════════════════════════════════
+    // BLOG POSTS — Easy to edit! Add/remove objects here.
+    // Fields: title, category, color, iconId, date, summary, url
+    // Set url to '#' for "Coming Soon", or a real URL for published posts.
+    // ═══════════════════════════════════════════════════════
+    var BLOG_ICONS = {
+      edit:   '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>',
+      shield: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+      code:   '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>',
+      lock:   '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>',
+      check:  '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>',
+      award:  '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>'
+    };
+
+    var BLOG_POSTS = [
+      {
+        title:    "Agentic AI & MCP Integration for Network Automation",
+        category: "AI Networking",
+        color:    "var(--cyan)",
+        iconId:   "edit",
+        summary:  "How Model Context Protocol (MCP) and agentic AI frameworks can revolutionize network operations — from intent-based configuration to autonomous fault remediation.",
+        url: "#"
+      },
+      {
+        title:    "Zero Trust Architecture with Cisco ISE & Palo Alto PCNSE",
+        category: "Security Architecture",
+        color:    "#a78bfa",
+        iconId:   "lock",
+        summary:  "Implementing Zero Trust Network Access using Cisco ISE combined with Palo Alto NGFW — real-world design patterns and lessons learned.",
+        url: "#"
+      },
+      {
+        title:    "NETCONF / RESTCONF & YANG — Beyond CLI Automation",
+        category: "Automation",
+        color:    "var(--green)",
+        iconId:   "code",
+        summary:  "Why YANG-based programmability with NETCONF and RESTCONF is the future of network automation, and how to bridge from Ansible to model-driven infrastructure.",
+        url: "#"
+      },
+      {
+        title:    "Threat Modelling with STRIDE & PASTA for Network Engineers",
+        category: "Cybersecurity",
+        color:    "var(--orange)",
+        iconId:   "shield",
+        summary:  "A practical guide to applying threat modelling methodologies in enterprise network architecture — identifying attack surfaces before adversaries do.",
+        url: "#"
+      },
+      {
+        title:    "DevSecOps in Network Pipelines — SAST, DAST & Policy as Code",
+        category: "DevSecOps",
+        color:    "var(--green)",
+        iconId:   "check",
+        summary:  "Embedding SAST, DAST, and OPA-based policy gates into CI/CD pipelines for infrastructure code — shifting security left in network automation workflows.",
+        url: "#"
+      },
+      {
+        title:    "3x CCIE Journey — Lessons from Security, DC & Automation Tracks",
+        category: "Career",
+        color:    "#8b5cf6",
+        iconId:   "award",
+        summary:  "The strategy, study approach, and lab methodology behind earning three CCIE certifications — Security, Data Center, and Automation — and what each track taught me.",
+        url: "#"
+      }
+    ];
+
+    // ── Render blog cards (no nested template literals) ──
+    (function renderBlog() {
+      var grid = document.getElementById('blog-grid');
+      if (!grid) return;
+      var cards = '';
+      for (var i = 0; i < BLOG_POSTS.length; i++) {
+        var p = BLOG_POSTS[i];
+        var icon = (BLOG_ICONS[p.iconId] || BLOG_ICONS.edit).replace('currentColor', p.color);
+        var isLive = p.url && p.url !== '#';
+        var tag = isLive
+          ? '<a href="' + p.url + '" target="_blank" class="blog-read-link">Read Post &#8599;</a>'
+          : '<span class="blog-coming">Coming Soon</span>';
+        cards += '<div class="cert-card blog-card">'
+          + '<div style="display:flex;align-items:center;gap:0.8rem;margin-bottom:0.8rem;">'
+          + '<div class="cert-logo-wrap" style="background:rgba(255,255,255,0.04);border-radius:10px;width:44px;height:44px;flex-shrink:0;display:flex;align-items:center;justify-content:center;">' + icon + '</div>'
+          + '<span style="font-family:var(--mono);font-size:0.6rem;color:' + p.color + ';letter-spacing:0.1em;text-transform:uppercase;">' + p.category + '</span>'
+          + '</div>'
+          + '<div class="cert-name" style="font-size:0.95rem;line-height:1.45;margin-bottom:0.65rem;">' + p.title + '</div>'
+          + '<div class="cert-issuer" style="font-size:0.8rem;color:var(--muted2);line-height:1.65;margin-bottom:0.9rem;">' + p.summary + '</div>'
+          + tag
+          + '</div>';
+      }
+      grid.innerHTML = cards;
+    })();
+
     // ─── COUNTER ANIMATION ───
-    const counters = document.querySelectorAll('[data-target]');
-    const co = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
+    function runCounter(el) {
+      var target = parseInt(el.dataset.target);
+      var suffix = el.dataset.suffix || '';
+      var current = 0;
+      var step = Math.ceil(target / 30);
+      var timer = setInterval(function() {
+        current = Math.min(current + step, target);
+        el.textContent = current + suffix;
+        if (current >= target) {
+          clearInterval(timer);
+          el.textContent = target + suffix;
+        }
+      }, 40);
+    }
+
+    var counters = document.querySelectorAll('[data-target]');
+
+    // Intersection observer — animate when scrolled into view
+    var co = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
         if (e.isIntersecting) {
-          const el = e.target;
-          const target = parseInt(el.dataset.target);
-          let current = 0;
-          const step = Math.ceil(target / 30);
-          const timer = setInterval(() => {
-            current = Math.min(current + step, target);
-            el.textContent = current + (el.dataset.suffix || '');
-            if (current >= target) {
-              clearInterval(timer);
-              el.textContent = target + (el.dataset.suffix || '');
-            }
-          }, 40);
-          co.unobserve(el);
+          runCounter(e.target);
+          co.unobserve(e.target);
         }
       });
     }, { threshold: 0.01 });
-    counters.forEach(c => co.observe(c));
-    // Trigger counters already in viewport
-    counters.forEach(c => {
-      const rect = c.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
-        const target = parseInt(c.dataset.target);
-        let current = 0;
-        const step = Math.ceil(target / 30);
-        const t = setInterval(() => {
-          current = Math.min(current + step, target);
-          c.textContent = current + (c.dataset.suffix || '');
-          if (current >= target) { clearInterval(t); c.textContent = target + (c.dataset.suffix || ''); }
-        }, 40);
-      }
+    counters.forEach(function(c) { co.observe(c); });
+
+    // Immediately run counters already visible on load
+    counters.forEach(function(c) {
+      var r = c.getBoundingClientRect();
+      if (r.top < window.innerHeight && r.bottom > 0) runCounter(c);
     });
 
-    // ─── FALLBACK: force reveal all if IntersectionObserver fires too late ───
-    setTimeout(() => {
-      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
-      document.querySelectorAll('.tl-item').forEach(el => el.classList.add('visible'));
+    // Fallback: force any still-zero counters after 800ms
+    setTimeout(function() {
+      counters.forEach(function(c) {
+        if (c.textContent === '0' || c.textContent === '') runCounter(c);
+      });
+    }, 800);
+
+    // Final safety: reveal all hidden elements after 2.5s
+    setTimeout(function() {
+      document.querySelectorAll('.reveal').forEach(function(el) { el.classList.add('visible'); });
+      document.querySelectorAll('.tl-item').forEach(function(el) { el.classList.add('visible'); });
     }, 2500);
 
   </script>
