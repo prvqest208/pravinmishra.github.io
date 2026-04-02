@@ -739,7 +739,7 @@
         </div>
         <div class="hero-meta-item">
           <div class="lbl">Email</div>
-          <div class="val"><a href="/cdn-cgi/l/email-protection#c0b0b2a1b6a9aef1f3f5f0eeada9b3a8b2a180afb5b4acafafabeea3afad"><span class="__cf_email__" data-cfemail="4a3a382b3c23247b797f7a6427233922382b0a253f3e2625252164292527">[email&#160;protected]</span></a></div>
+          <div class="val"><a href="mailto:pravin1350.mishra@outlook.com">pravin1350.mishra@outlook.com</a></div>
         </div>
         <div class="hero-meta-item">
           <div class="lbl">LinkedIn</div>
@@ -747,7 +747,7 @@
         </div>
       </div>
       <div class="hero-cta">
-        <a href="/cdn-cgi/l/email-protection#62121003140b0c535157524c0f0b110a1003220d17160e0d0d094c010d0f" class="btn-primary">Get In Touch</a>
+        <a href="mailto:pravin1350.mishra@outlook.com" class="btn-primary">Get In Touch</a>
         <a href="https://www.credly.com/users/pravin-mishra" target="_blank" class="btn-secondary">View Credentials ↗</a>
       </div>
     </div>
@@ -782,8 +782,8 @@
             <a href="tel:+14374289095" class="profile-card-link">
               <span class="ico">TEL</span>+1 437 428 9095
             </a>
-            <a href="/cdn-cgi/l/email-protection#45353724332c2b747670756b282c362d3724052a3031292a2a2e6b262a28" class="profile-card-link"></ahref>
-              <span class="ico">MAIL</span><span class="__cf_email__" data-cfemail="dfafadbea9b6b1eeeceaeff1b2b6acb7adbe9fb0aaabb3b0b0b4f1bcb0b2">[email&#160;protected]</span>
+            <a href="mailto:pravin1350.mishra@outlook.com" class="profile-card-link">
+              <span class="ico">MAIL</span>pravin1350.mishra@outlook.com
             </a>
             <a href="https://www.credly.com/users/pravin-mishra" target="_blank" class="profile-card-link">
               <span class="ico">CRED</span>credly.com/users/pravin-mishra
@@ -1651,12 +1651,12 @@
             <span class="contact-ico">PHONE</span>
             <span class="contact-val">+1 437 428 9095</span>
           </a>
-          <a href="/cdn-cgi/l/email-protection#3d4d4f5c4b54530c0e080d1350544e554f5c7d52484951525256135e5250" class="contact-link">
+          <a href="mailto:pravin1350.mishra@outlook.com" class="contact-link">
             <span class="contact-ico" style="display:flex;align-items:center;gap:4px;">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
               EMAIL
             </span>
-            <span class="contact-val"><span class="__cf_email__" data-cfemail="64141605120d0a555751544a090d170c1605240b1110080b0b0f4a070b09">[email&#160;protected]</span></span>
+            <span class="contact-val">pravin1350.mishra@outlook.com</span>
           </a>
           <a href="https://wa.me/14374289095" target="_blank" class="contact-link" style="border-color:rgba(37,211,102,0.3);">
             <span class="contact-ico" style="color:#25d366;display:flex;align-items:center;gap:4px;">
@@ -1689,10 +1689,26 @@
   </section>
 
   <footer>
-    <div>© 2025 Pravin Kumar Mishra &nbsp;·&nbsp; Network Security &amp; Automation Architect &nbsp;·&nbsp; 3× CCIE · CISSP · PCNSE · Azure AZ-700</div>
+    <div>© 2025 Pravin Kumar Mishra &nbsp;·&nbsp; Network Security &amp; Automation Architect &nbsp;·&nbsp; 3× CCIE · CISSP · PCNSE · Azure AZ-700 &nbsp;·&nbsp; <span id="blog-admin-trigger" style="color:var(--muted);cursor:pointer;user-select:none;opacity:0.4;font-size:0.55rem;letter-spacing:0.1em;" title="Blog Admin">✎ ADMIN</span></div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <!-- ─── BLOG ADMIN PANEL ─── -->
+  <div id="blog-admin-overlay" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(6,8,16,0.92);backdrop-filter:blur(16px);overflow-y:auto;">
+    <div style="max-width:860px;margin:0 auto;padding:2rem;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;border-bottom:1px solid #1a2030;padding-bottom:1rem;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:0.08em;color:#00d4ff;">✎ Blog Admin Panel</div>
+        <button onclick="closeBlogAdmin()" style="background:transparent;border:1px solid #1a2030;color:#718096;font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;padding:0.4rem 0.9rem;border-radius:4px;cursor:pointer;">✕ CLOSE</button>
+      </div>
+      <div style="display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+        <button onclick="addBlogPost()" style="background:#00d4ff;color:#060810;border:none;font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;padding:0.6rem 1.2rem;border-radius:4px;cursor:pointer;font-weight:600;">+ ADD POST</button>
+        <button onclick="saveBlogAdmin()" style="background:transparent;border:1px solid #10b981;color:#10b981;font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;padding:0.6rem 1.2rem;border-radius:4px;cursor:pointer;">✓ SAVE &amp; APPLY</button>
+        <span id="admin-status" style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:#4a5568;align-self:center;"></span>
+      </div>
+      <div id="admin-posts-list" style="display:flex;flex-direction:column;gap:1rem;"></div>
+    </div>
+  </div>
+
+  <script>
     // ─── ANIMATED CANVAS ───
     const canvas = document.getElementById('bgCanvas');
     const ctx = canvas.getContext('2d');
@@ -1994,6 +2010,181 @@
       document.querySelectorAll('.reveal').forEach(function(el) { el.classList.add('visible'); });
       document.querySelectorAll('.tl-item').forEach(function(el) { el.classList.add('visible'); });
     }, 2500);
+
+    // ═══════════════════════════════════════════════════════
+    // BLOG ADMIN PANEL
+    // ═══════════════════════════════════════════════════════
+    var ICON_OPTIONS = ['edit','shield','code','lock','check','award'];
+    var COLOR_OPTIONS = [
+      { label: 'Cyan',   val: 'var(--cyan)'   },
+      { label: 'Purple', val: '#a78bfa'        },
+      { label: 'Green',  val: 'var(--green)'  },
+      { label: 'Orange', val: 'var(--orange)' },
+      { label: 'Purple2',val: '#8b5cf6'       }
+    ];
+
+    function openBlogAdmin() {
+      document.getElementById('blog-admin-overlay').style.display = 'block';
+      document.body.style.overflow = 'hidden';
+      renderAdminPosts();
+    }
+    function closeBlogAdmin() {
+      document.getElementById('blog-admin-overlay').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('blog-admin-trigger').addEventListener('click', openBlogAdmin);
+
+    // Keyboard shortcut: Ctrl+Shift+B
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && e.shiftKey && e.key === 'B') openBlogAdmin();
+    });
+
+    function renderAdminPosts() {
+      var list = document.getElementById('admin-posts-list');
+      list.innerHTML = '';
+      BLOG_POSTS.forEach(function(p, i) {
+        var card = document.createElement('div');
+        card.style.cssText = 'background:#0d1017;border:1px solid #1a2030;border-radius:8px;padding:1.4rem;position:relative;';
+        card.innerHTML =
+          '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">' +
+            '<div style="font-family:\'JetBrains Mono\',monospace;font-size:0.65rem;color:#00d4ff;letter-spacing:0.1em;">POST #' + (i+1) + '</div>' +
+            '<div style="display:flex;gap:0.5rem;">' +
+              (i > 0 ? '<button onclick="moveBlogPost(' + i + ',-1)" style="' + adminBtnStyle('#222d40','#718096') + '">▲</button>' : '') +
+              (i < BLOG_POSTS.length - 1 ? '<button onclick="moveBlogPost(' + i + ',1)" style="' + adminBtnStyle('#222d40','#718096') + '">▼</button>' : '') +
+              '<button onclick="deleteBlogPost(' + i + ')" style="' + adminBtnStyle('rgba(255,107,53,0.1)','#ff6b35') + '">✕ DELETE</button>' +
+            '</div>' +
+          '</div>' +
+          '<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-bottom:0.8rem;">' +
+            adminField('Title', 'post-title-'+i, p.title, 'text', true) +
+            adminField('Category', 'post-cat-'+i, p.category, 'text', false) +
+          '</div>' +
+          '<div style="margin-bottom:0.8rem;">' +
+            adminField('Summary', 'post-summary-'+i, p.summary, 'textarea', true) +
+          '</div>' +
+          '<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.8rem;">' +
+            adminField('URL (use # for Coming Soon)', 'post-url-'+i, p.url, 'text', false) +
+            adminSelectField('Icon', 'post-icon-'+i, ICON_OPTIONS, p.iconId) +
+            adminColorField('Color', 'post-color-'+i, COLOR_OPTIONS, p.color) +
+          '</div>';
+        list.appendChild(card);
+      });
+    }
+
+    function adminBtnStyle(bg, color) {
+      return 'background:' + bg + ';border:1px solid ' + color + ';color:' + color + ';font-family:\'JetBrains Mono\',monospace;font-size:0.62rem;letter-spacing:0.08em;padding:0.3rem 0.65rem;border-radius:4px;cursor:pointer;';
+    }
+
+    function adminField(label, id, val, type, fullWidth) {
+      var inputStyle = 'width:100%;background:#060810;border:1px solid #1a2030;border-radius:4px;color:#e8edf5;font-family:\'JetBrains Mono\',monospace;font-size:0.72rem;padding:0.5rem 0.7rem;outline:none;resize:vertical;';
+      var input = type === 'textarea'
+        ? '<textarea id="' + id + '" rows="3" style="' + inputStyle + '">' + escHtml(val) + '</textarea>'
+        : '<input id="' + id + '" type="text" value="' + escHtml(val) + '" style="' + inputStyle + '"/>';
+      return '<div' + (fullWidth ? '' : '') + '>' +
+        '<div style="font-family:\'JetBrains Mono\',monospace;font-size:0.58rem;color:#4a5568;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.3rem;">' + label + '</div>' +
+        input + '</div>';
+    }
+
+    function adminSelectField(label, id, options, current) {
+      var opts = options.map(function(o) {
+        return '<option value="' + o + '"' + (o === current ? ' selected' : '') + '>' + o + '</option>';
+      }).join('');
+      return '<div>' +
+        '<div style="font-family:\'JetBrains Mono\',monospace;font-size:0.58rem;color:#4a5568;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.3rem;">' + label + '</div>' +
+        '<select id="' + id + '" style="width:100%;background:#060810;border:1px solid #1a2030;border-radius:4px;color:#e8edf5;font-family:\'JetBrains Mono\',monospace;font-size:0.72rem;padding:0.5rem 0.7rem;outline:none;">' + opts + '</select>' +
+      '</div>';
+    }
+
+    function adminColorField(label, id, options, current) {
+      var opts = options.map(function(o) {
+        return '<option value="' + o.val + '"' + (o.val === current ? ' selected' : '') + '>' + o.label + '</option>';
+      }).join('');
+      return '<div>' +
+        '<div style="font-family:\'JetBrains Mono\',monospace;font-size:0.58rem;color:#4a5568;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.3rem;">' + label + '</div>' +
+        '<select id="' + id + '" style="width:100%;background:#060810;border:1px solid #1a2030;border-radius:4px;color:#e8edf5;font-family:\'JetBrains Mono\',monospace;font-size:0.72rem;padding:0.5rem 0.7rem;outline:none;">' + opts + '</select>' +
+      '</div>';
+    }
+
+    function escHtml(str) {
+      return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    function saveBlogAdmin() {
+      for (var i = 0; i < BLOG_POSTS.length; i++) {
+        var title   = document.getElementById('post-title-'+i);
+        var cat     = document.getElementById('post-cat-'+i);
+        var summary = document.getElementById('post-summary-'+i);
+        var url     = document.getElementById('post-url-'+i);
+        var icon    = document.getElementById('post-icon-'+i);
+        var color   = document.getElementById('post-color-'+i);
+        if (title)   BLOG_POSTS[i].title    = title.value;
+        if (cat)     BLOG_POSTS[i].category = cat.value;
+        if (summary) BLOG_POSTS[i].summary  = summary.value;
+        if (url)     BLOG_POSTS[i].url      = url.value;
+        if (icon)    BLOG_POSTS[i].iconId   = icon.value;
+        if (color)   BLOG_POSTS[i].color    = color.value;
+      }
+      // Re-render blog section
+      (function renderBlogFromAdmin() {
+        var grid = document.getElementById('blog-grid');
+        if (!grid) return;
+        var cards = '';
+        for (var i = 0; i < BLOG_POSTS.length; i++) {
+          var p = BLOG_POSTS[i];
+          var icon = (BLOG_ICONS[p.iconId] || BLOG_ICONS.edit).replace('currentColor', p.color);
+          var isLive = p.url && p.url !== '#';
+          var tag = isLive
+            ? '<a href="' + p.url + '" target="_blank" class="blog-read-link">Read Post &#8599;</a>'
+            : '<span class="blog-coming">Coming Soon</span>';
+          cards += '<div class="cert-card blog-card">'
+            + '<div style="display:flex;align-items:center;gap:0.8rem;margin-bottom:0.8rem;">'
+            + '<div class="cert-logo-wrap" style="background:rgba(255,255,255,0.04);border-radius:10px;width:44px;height:44px;flex-shrink:0;display:flex;align-items:center;justify-content:center;">' + icon + '</div>'
+            + '<span style="font-family:var(--mono);font-size:0.6rem;color:' + p.color + ';letter-spacing:0.1em;text-transform:uppercase;">' + p.category + '</span>'
+            + '</div>'
+            + '<div class="cert-name" style="font-size:0.95rem;line-height:1.45;margin-bottom:0.65rem;">' + p.title + '</div>'
+            + '<div class="cert-issuer" style="font-size:0.8rem;color:var(--muted2);line-height:1.65;margin-bottom:0.9rem;">' + p.summary + '</div>'
+            + tag
+            + '</div>';
+        }
+        grid.innerHTML = cards;
+      })();
+
+      // Show saved status
+      var status = document.getElementById('admin-status');
+      status.textContent = '✓ Changes applied to blog section!';
+      status.style.color = '#10b981';
+      setTimeout(function() { status.textContent = ''; }, 3000);
+    }
+
+    function addBlogPost() {
+      BLOG_POSTS.push({
+        title:    "New Blog Post",
+        category: "Category",
+        color:    "var(--cyan)",
+        iconId:   "edit",
+        summary:  "Write your post summary here.",
+        url:      "#"
+      });
+      renderAdminPosts();
+      // Scroll to bottom of list
+      var list = document.getElementById('admin-posts-list');
+      list.lastElementChild && list.lastElementChild.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function deleteBlogPost(index) {
+      if (BLOG_POSTS.length <= 1) { alert('Must have at least one post.'); return; }
+      BLOG_POSTS.splice(index, 1);
+      renderAdminPosts();
+    }
+
+    function moveBlogPost(index, direction) {
+      var newIndex = index + direction;
+      if (newIndex < 0 || newIndex >= BLOG_POSTS.length) return;
+      var tmp = BLOG_POSTS[index];
+      BLOG_POSTS[index] = BLOG_POSTS[newIndex];
+      BLOG_POSTS[newIndex] = tmp;
+      renderAdminPosts();
+    }
 
   </script>
 </body>
